@@ -1,0 +1,42 @@
+{{ if .Site.Params.widgets.categories }}
+{{ if isset .Site.Taxonomies "categories" }}
+{{ if not (eq (len .Site.Taxonomies.categories) 0) }}
+
+<div class="panel sidebar-menu">
+    <div class="panel-heading">
+        <h5><div class="list-group"><a class="list-group-item"><i class="fa fa-book fa-fw"
+        href="#setup-articles" data-parent="#main-nav" data-toggle="collapse" aria-hidden="true"></i>&nbsp; {{ i18n "categoriesTitle" }}</a></div>
+        </h5>
+    </div>
+    <ul id="setup-articles" class="collapse">
+        {{ range $name, $items := .Site.Taxonomies.categories }}
+        <li><a href="{{ $.Site.BaseURL }}categories/{{ $name | urlize | lower }}">{{ $name }} ({{ len $items }})</a>
+        </li>
+        {{ end }}
+    </ul>
+</div>
+
+<!--<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">{{ i18n "categoriesTitle" }}</a>
+
+      </h4>
+    </div>
+
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+        
+            {{ range $name, $items := .Site.Taxonomies.categories }}
+            <li><a href="{{ $.Site.BaseURL }}categories/{{ $name | urlize | lower }}">{{ $name }} ({{ len $items }})</a>
+            </li>
+            {{ end }}
+        
+      </div>
+    </div>
+    </div>-->
+
+{{ end }}
+{{ end }}
+{{ end }}

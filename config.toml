@@ -1,0 +1,94 @@
+baseurl = "https://example.org"
+title = "home"
+theme = "oteke"
+languageCode = "en-us"
+# Site language. Available translations in the theme's `/i18n` directory.
+defaultContentLanguage = "en"
+# Enable comments by entering your Disqus shortname
+disqusShortname = "diditwbw"
+# Enable Google Analytics by entering your tracking code
+googleAnalytics = ""
+
+# Define the number of posts per page
+paginate = 10
+
+[menu]
+
+[[menu.main]]
+    name = "Home"
+    url  = "/"
+    weight = 1
+
+[[menu.main]]
+    name = "Blog"
+    identifier = "blog"
+    url  = "/blog/"
+    weight = 2
+
+[[menu.main]]
+    name = "Contact"
+    url  = "/contact/"
+    weight = 3
+
+[[menu.main]]
+    name = "About"
+    url  = "/about/"
+    weight = 4
+
+[params]
+    viewMorePostLink = "/blog/"
+    author = "admin"
+    # defaultKeywords = ["hugo", "go"]
+    # defaultDescription = "Site by power using hugo"
+
+    # Google Maps API key (if not set will default to not passing a key.)
+    # googleMapsApiKey = ""
+
+    # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
+    style = "green"
+
+    # Since this template is static, the contact form uses www.formspree.io as a
+    # proxy. The form makes a POST request to their servers to send the actual
+    # email. Visitors can send up to a 1000 emails each month for free.
+    #
+    # What you need to do for the setup?
+    #
+    # - set your email address under 'email' below
+    # - upload the generated site to your server
+    # - send a dummy email yourself to confirm your account
+    # - click the confirm link in the email from www.formspree.io
+    # - you're done. Happy mailing!
+    #
+    # Enable the contact form by entering your Formspree.io email
+    email = "diditwbw@gmail.com"
+
+    # about_us = "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>"
+    # copyright = "Copyright (c) 2015 - 2016, YourCompany; all rights reserved."
+
+    # Format dates with Go's time formatting
+    date_format = "January 2, 2006"
+
+    # Syntax highlighting theme
+    highlight_css  = "true"
+
+    logo = "img/logo.png"
+
+[Permalinks]
+    blog = "/post/:year/:month/:day/:filename/"
+
+# Enable and disable widgets for the right sidebar
+[params.widgets]
+    categories = true
+    tags = true
+    search = true
+
+[params.carousel]
+    enable = true
+    # All carousel items are defined in their own files. You can find example items
+    # at 'exampleSite/data/carousel'.
+    # For more informtion take a look at the README.
+
+[params.recent_posts]
+    enable = true
+    title = ""
+    subtitle = ""

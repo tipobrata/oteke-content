@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+  {{ partial "head.html" . }}
+
+  <body>
+
+    <div id="all">
+
+        <header>
+
+          {{ partial "nav.html" . }}
+
+        </header>
+
+        {{ partial "titlebar.html" . }}
+                
+                <!--*** RIGHT COLUMN *** -->
+        <div id="content">
+          <div role="main" id="main-content">
+            <div class="main">
+              <div class="container body-content docs blog">
+                <div class="container">
+                  <div class="row">
+
+                  <div class="col-sm-2 col-md-2">
+                  <div class="hidden-xs col-sm-3 col-md-2">    
+                    <nav id="docs-navbar" class="docs-nav updates-nav visible-md visible-lg">
+                      <ul class="nav" id="main-nav">
+                        <li class="panel collapsed">
+                        <div class="wrapper">                           
+                          {{ partial "widgets/right.html" . }}
+                        </div>
+                        </li>
+                      </ul>
+                    </nav>                   
+                  </div>
+                  </div>
+                    <!-- *** LEFT COLUMN *** -->
+                    
+                    <div class="col-sm-9 col-md-8 body" id="blog-listing-large">
+                        <p class="text-muted text-uppercase mb-small text-right">{{ if .Params.author }}By <a href="#">{{ .Params.author }}</a> | {{ end }}{{ .Date.Format .Site.Params.date_format }}</p>
+                        <div id="post-content">
+                        <div class="wrapper">
+                          <!--<h1>{{ .Title }} {{ if .IsDraft }} (Draft){{ end }}</h1>
+                        {{ range .Data.Pages }}
+                            <a href="{{ .Permalink }}" title="{{ .Title }}">
+                            <h2>{{ .Title }}</h2>
+                            </a>
+
+                            <br>
+                        {{ printf "%s" .Permalink | markdownify }}
+
+                        <hr>
+                            {{ end }}
+                            
+                        </div>-->
+
+                        {{ .Content }}
+
+                      </div>
+                        </div>
+                        <!-- /#post-content -->
+                        {{ if .Site.DisqusShortname }}
+                        <div id="comments">
+                            {{ template "_internal/disqus.html" . }}
+                        </div>
+                        {{ end }}
+
+                    </div>
+
+                    <!-- /#blog-post -->
+
+
+
+                <!--</div>
+                 /.row 
+
+                </div>-->               
+                    </div>                  
+                </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /#content -->
+        <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+        {{ partial "footer.html" . }}
+
+    </div>
+    <!-- /#all -->
+
+    {{ partial "scripts.html" . }}
+
+  </body>
+</html>

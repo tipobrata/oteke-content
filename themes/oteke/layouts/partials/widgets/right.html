@@ -1,0 +1,30 @@
+{{ if .Site.Params.widgets.tags }}
+{{ if isset .Site.Taxonomies "tags" }}
+{{ if not (eq (len .Site.Taxonomies.tags) 0) }}
+
+
+<div class="hidden-xs col-sm-3 col-md-2">
+<nav id="docs-subnavbar">
+<ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205">
+<h4>List Post</h4>
+    <!--<br>-->
+        {{ printf "%s" .TableOfContents | markdownify }}
+    <!--<hr>-->
+    <a class="twitter-share-button"
+        href="https://twitter.com/share"
+        data-text="#"
+        data-via="Code"
+        data-counturl="#"
+        data-count="vertical">
+        Tweet
+    </a>
+    <div class="connect-widget"></div>
+</ul>  
+<!--</ul>-->
+</nav>
+
+</div>
+
+{{ end }}
+{{ end }}
+{{ end }}
