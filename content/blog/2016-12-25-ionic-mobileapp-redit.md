@@ -3,7 +3,7 @@ title = "Ionic dan Web Service"
 date = "2016-12-25T21:49:20+02:00"
 tags = ["angular", "ionic"]
 categories = ["Ionic"]
-author = "diditwbw"
+author = "tipobrata"
 +++
 
 ## Membuat applikasi ionic dan menggunakan web service

@@ -3,7 +3,7 @@ title = "Ionic to Apk=Android"
 date = "2017-02-06T21:49:20+02:00"
 tags = ["ionic"]
 categories = ["Ionic"]
-author = "diditwbw"
+author = "tipobrata"
 +++
 
 ## Start

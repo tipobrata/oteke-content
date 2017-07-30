@@ -3,7 +3,7 @@ title = "Startup Java On Linux Mint"
 date = "2017-05-22T21:49:20+02:00"
 tags = ["linux"]
 categories = ["linux"]
-author = "diditwbw"
+author = "tipobrata"
 +++
 
 # Instalasi JDK 8 di Linux Mint

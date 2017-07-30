@@ -3,7 +3,7 @@ title = "Angular dan AngularFire2"
 date = "2017-03-11T21:49:20+02:00"
 tags = ["angular", "bootstraps", "angularFire2"]
 categories = ["angular"]
-author = "diditwbw"
+author = "tipobrata"
 +++
 
 # Membuat Project

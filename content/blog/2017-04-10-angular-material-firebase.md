@@ -3,7 +3,7 @@ title = "Angular-material dan Firebase"
 date = "2017-03-10T21:49:20+02:00"
 tags = ["angular", "material", "angularFire2"]
 categories = ["angular", "material"]
-author = "diditwbw"
+author = "tipobrata"
 +++
 
 # Menggunakan Material pada Angular

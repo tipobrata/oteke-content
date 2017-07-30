@@ -3,7 +3,7 @@ title = "Bootstraps dengan Sass"
 date = "2017-04-30T21:49:20+02:00"
 tags = ["sass", "bootstraps"]
 categories = ["frontend"]
-author = "diditwbw"
+author = "tipobrata"
 +++
 
 ## Install Bower dari npm

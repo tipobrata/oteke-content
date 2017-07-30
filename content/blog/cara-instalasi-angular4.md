@@ -3,7 +3,7 @@ title = "Start With Angular"
 date = "2017-03-26T21:49:20+02:00"
 tags = ["angular"]
 categories = ["angular"]
-author = "diditwbw"
+author = "tipobrata"
 +++
 
 

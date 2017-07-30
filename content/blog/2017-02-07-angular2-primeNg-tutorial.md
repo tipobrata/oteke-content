@@ -3,7 +3,7 @@ title = "Angular dan PrimeNg"
 date = "2017-02-07T21:49:20+02:00"
 tags = ["angular", "PrimeNg", "angularFire2"]
 categories = ["angular"]
-author = "diditwbw"
+author = "tipobrata"
 +++
 
 ## Buat Project dengan angular2-cli

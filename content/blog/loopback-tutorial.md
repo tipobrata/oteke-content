@@ -3,7 +3,7 @@ title = "Loopback Framework"
 date = "2017-05-21T21:49:20+02:00"
 tags = ["strongloop", "loopback"]
 categories = ["loopback"]
-author = "diditwbw"
+author = "tipobrata"
 +++
 
 ## Bekerja dengan StrongLoop

@@ -3,7 +3,7 @@ title = "Dasar Angular"
 date = "2017-01-24T21:49:20+02:00"
 tags = ["angular"]
 categories = ["Angular"]
-author = "diditwbw"
+author = "tipobrata"
 +++
 
 ## Belajar dasar angular
