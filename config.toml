@@ -1,4 +1,4 @@
-baseurl = "https://example.org"
+baseurl = "https://tipobrata.github.io/"
 title = "home"
 theme = "oteke"
 languageCode = "en-us"
@@ -37,7 +37,7 @@ paginate = 10
 
 [params]
     viewMorePostLink = "/blog/"
-    author = "admin"
+    author = "tipobrata"
     # defaultKeywords = ["hugo", "go"]
     # defaultDescription = "Site by power using hugo"
 
@@ -60,13 +60,13 @@ paginate = 10
     # - you're done. Happy mailing!
     #
     # Enable the contact form by entering your Formspree.io email
-    email = "diditwbw@gmail.com"
+    email = "xperia.tipobrata@gmail.com"
 
     # about_us = "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>"
     # copyright = "Copyright (c) 2015 - 2016, YourCompany; all rights reserved."
 
     # Format dates with Go's time formatting
-    date_format = "January 2, 2006"
+    date_format = "02 Jan 2006"
 
     # Syntax highlighting theme
     highlight_css  = "true"

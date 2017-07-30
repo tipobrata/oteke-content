@@ -6,4 +6,4 @@ keywords = ["FAQ","How do I","questions","what if"]
 +++
 
 
-## ini sebuah blog?
+## the blog?
