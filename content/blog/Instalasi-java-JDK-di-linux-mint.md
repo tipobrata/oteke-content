@@ -1,12 +1,12 @@
 +++
 title = "Startup Java On Linux Mint"
 date = "2017-05-22T21:49:20+02:00"
-tags = ["linux"]
+tags = ["lmde", "linux"]
 categories = ["linux"]
 author = "tipobrata"
 +++
 
-# Instalasi JDK 8 di Linux Mint
+### Instalasi JDK 8 di Linux Mint
 
 Download JDK sesuai OS
 
@@ -17,6 +17,7 @@ $ file /sbin/init
 /sbin/init: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 2.6.32, BuildID[sha1]=e8b7c47e46abe359442f435fc95144279c5ddec5, stripped
 
 ```
+### Cek java version
 
 ```
 $ java -version
@@ -25,13 +26,13 @@ OpenJDK Runtime Environment (IcedTea 2.6.7) (7u111-2.6.7-2~deb8u1)
 OpenJDK 64-Bit Server VM (build 24.111-b01, mixed mode)
 
 ```
-* Cara Hapus OpenJDK yang sudah terinstall
+### Cara Hapus OpenJDK yang sudah terinstall
 
 ```
 $ sudo apt-get purge openjdk-* 
 ```
 
-* Buat directory java
+**Buat directory java**
 
 ```
 $ sudo mkdir -p /usr/local/java
@@ -40,13 +41,14 @@ $ cd /usr/local/java
 
 ```
 
-* Extract Paket Binary Java 
+- Extract Paket Binary Java
 
 ```
 sudo tar xvzf jdk-8u60-linux-x64.tar.gz
 ```
 
-**Menambahkan PATH Environment pada system**
+- Menambahkan PATH Environment pada system
+
 PATH file /etc/profile dan tambahkan variable sistem berikut untuk jalur sistem. Gunakan gedit atau text editor lainnya.
 
 ```
@@ -60,20 +62,20 @@ export PATH
 ```
 
 
-Perintah untuk memberitahukan sistem bahwa Oracle Java JRE tersedia untuk digunakan.
+- Perintah untuk memberitahukan sistem bahwa Oracle Java JRE tersedia untuk digunakan.
 
 ```
 sudo update-alternatives --install "/usr/bin/java" "java" "/usr/local/java/jdk1.8.0_131/bin/java" 1
 
 ```
 
-Perintah ini memberitahukan sistem bahwa Oracle Java JDK tersedia untuk digunakan.
+- Perintah ini memberitahukan sistem bahwa Oracle Java JDK tersedia untuk digunakan.
 
 ```
 sudo update-alternatives --install "/usr/bin/javac" "javac" "/usr/local/java/jdk1.8.0_131/bin/javac" 1
 ```
 
-Perintah ini memberitahukan sistem bahwa Oracle Java Web Start tersedia untuk digunakan.
+- Perintah ini memberitahukan sistem bahwa Oracle Java Web Start tersedia untuk digunakan.
 
 ```
 sudo update-alternatives --install "/usr/bin/javaws" "javaws" "/usr/local/java/jdk1.8.0_131/bin/javaws" 1
@@ -82,37 +84,38 @@ sudo update-alternatives --install "/usr/bin/javaws" "javaws" "/usr/local/java/j
 
 ### Memberitahu sistem bahwa Oracle Java JDK/JRE harus menjadi default Java.
 
-* Setting JRE:
+Set JRE:
 
 ```
 sudo update-alternatives --set java /usr/local/java/jdk1.8.0_131/bin/java
 ```
 
-* Setting Javac Compiler
+- Set Javac Compiler
 
 ```
 sudo update-alternatives --set javac /usr/local/java/jdk1.8.0_131/bin/javac
 ```
 
-* Setting Java Web Start
+- Set Java Web Start
+
 ```
 sudo update-alternatives --set javaws /usr/local/java/jdk1.8.0_131/bin/javaws 
 ```
 
-* Reload system wide PATH /etc/profile dengan perintah:
+- Reload system wide PATH /etc/profile dengan perintah:
 
 ```
 . /etc/profile
 ```
 
-Tes untuk melihat apakah Oracle Java telah terinstal
+- Tes untuk melihat apakah Oracle Java telah terinstal
 
 ```
 java -version
 ```
 
 
-## Install Netbean 8.2 ##
+### Install Netbean 8.2
 
 [NetBean Download](https://netbeans.org/downloads/index.html)
 
@@ -123,7 +126,7 @@ $ chmod +x netbeans-8.2-linux.sh
 $ sh ./netbeans-8.2-linux.sh
 ```
 
-## Install Maven ##
+### Install Maven
 
 
 [Maven 3.5.0](http://apache.repo.unpas.ac.id/maven/maven-3/3.5.0/binaries/apache-maven-3.5.0-bin.tar.gz)
@@ -148,7 +151,7 @@ Check environment variable value
 echo $JAVA_HOME
 ```
 
-**Adding to PATH**
+- Adding to PATH
 
 ```
 export PATH=/opt/apache-maven-3.5.0/bin:$PATH
@@ -168,15 +171,15 @@ PATH=$PATH:$M2
 export PATH
 ```
 
-* Reload system ketik: ‘source /etc/profile’
+Reload system ketik: ‘source /etc/profile’
 
-* Test Installation
+- Test Installation
 
 ```
  $ mvn –version
 ```
 
-## Install MySQl 5.7 di debian 8 dengan menggunakan APT Repository ##
+### Install MySQl 5.7 di debian 8 dengan menggunakan APT Repository
 
 Download deb dpkg
 
@@ -239,7 +242,7 @@ create table customers (customer_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, fir
 Cara Stop the current MySQL server instance.
 
 ```
-sudo systemctl stop mysql.serivice
+sudo systemctl stop mysql.service
 ```
 
 Install Tune MySQL
@@ -261,13 +264,19 @@ Please enter your MySQL administrative password:
 
 MySql config file berada `/etc/mysql/my.cnf`
  MySql se
-cara restart MySQL setelah merubah config, jalankan perintah di bawah :
+cara stop, start dan restart MySQL setelah merubah config, jalankan perintah di bawah :
 
 ```
-/etc/init.d/mysql restart
+sudo /etc/init.d/mysql stop
+sudo /etc/init.d/mysql start
+sudo /etc/init.d/mysql restart
 ```
 
-## Install Tomcat 8.5.x di debian jessy
+### Install Tomcat 8.5.x di debian jessy
+
+[Install Tomcat](https://wolfpaulus.com/java/tomcat-jessie/)
+
+[debian tutorial](http://www.debiantutorials.com/category/web/)
 
 Ketikkan bash di bawah
 ```
@@ -287,7 +296,7 @@ Creating home directory `/home/tomcat' ...
 
 ```
 
-# Download dan extrak paket tomcat 8
+- Download dan extrak paket tomcat 8
 
 ```
 $ wget http://www.us.apache.org/dist/tomcat/tomcat-8/v8.5.5/bin/apache-tomcat-8.5.5.tar.gz
@@ -311,7 +320,7 @@ $ sudo chmod +x /usr/share/tomcat/bin/*.sh
 
 ```
 
-#Starting Tomcat
+- Starting Tomcat
 
 ```
 $ sudo /bin/su - tomcat -c /usr/share/tomcat/bin/startup.sh
@@ -324,7 +333,7 @@ Tomcat started.
 
 ```
 
-#Stopping Tomcat
+- Stopping Tomcat
 
 ```
 $ sudo /bin/su - tomcat -c /usr/share/tomcat/bin/shutdown.sh
@@ -336,7 +345,7 @@ Using CLASSPATH:       /usr/share/tomcat/bin/bootstrap.jar:/usr/share/tomcat/bin
 
 ```
 
-#Menjalankan server tomcat pada saat booting pertama kali
+- Menjalankan server tomcat pada saat booting pertama kali
 
 ```
 #!/bin/bash
@@ -374,11 +383,7 @@ chmod 755 /etc/init.d/tomcat
 update-rc.d tomcat defaults
 ```
 
-[Install Tomcat](https://wolfpaulus.com/java/tomcat-jessie/)
-
-[debian tutorial](http://www.debiantutorials.com/category/web/)
-
-## Install IntelliJ IDEA
+### Install IntelliJ IDEA
 
 Download IntelliJ IDEA [ideaIC-2017.1.2.tar.gz](https://www.jetbrains.com/idea/download/download-thanks.html?platform=linux&code=IIC)
 
@@ -403,3 +408,64 @@ $ sh ./idea.sh
 ```
 
 Selanjutnya ikuti instalasi seperti biasa.
+
+
+### Install Android Studio
+
+Extract `android-studio-ide-162.4069837-linux.zip` ke dalam folder `/opt`
+
+```
+$ sudo unzip android-studio-ide-141.2178183-linux.zip -d /opt/
+```
+
+Masuk ke directory di bawah
+```
+$ cd /opt/android-studio/bin
+```
+Jalankan command di bawah untuk menjalankan instalasi
+
+```
+$ ./studio.sh
+```
+Selanjutnya ikuti instalasi seperti biasa.
+
+- install plugin yang berhubungan dengan kotlin
+
+### Install MongoDB
+
+[install mongoDB](https://www.hugeserver.com/kb/install-mongodb-debian-8-ubuntu-16/)
+[mongoDB DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-debian-8)
+
+tambahkan
+
+```
+#security:
+security:
+ authorization: enabled
+```
+
+Manage your MongoDB Service
+
+```
+# systemctl enable mongod
+```
+
+For Start/Stop MongoDB serivce:
+
+```
+# systemctl start mongod
+
+# systemctl stop mongod
+
+or
+
+# service mongod start
+
+# service mongod stop
+```
+
+See your MongoDB status:
+
+```
+# systemctl status mongod
+```
